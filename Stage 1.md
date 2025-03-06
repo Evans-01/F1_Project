@@ -96,7 +96,7 @@ To fix this, I wrote **custom scraping code for each season** to extract the rac
 ---
 
 📌 **Next Steps:**
-🚀 Moving to **Stage 2**, which will involve **data analysis and visualization!** 📊  
+🚀 Moving to **[Stage 2](https://github.com/Evans-01/F1_Project/blob/3250cdc2f4fa7109093cb79a2cf2400512839ddf/Stage%202.md)**, which will involve **data analysis and visualization!** 📊  
 
 ---
 
