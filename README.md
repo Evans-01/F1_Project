@@ -16,7 +16,7 @@ Analyzing **Formula 1 race data** from **2011 to 2024**, covering **driver perfo
 ## 🛠 **Tech Stack**  
 📌 `Python` | `Pandas` | `SQLite3` | `Lets-Plot`  
 
-### **[Stage 1: Data Collection & Cleaning](Stage 1.md)**  
-### **[Stage 2: Data Analysis & Visualization](Stage 2.md)**  
+### **[[Stage 1: Data Collection & Cleaning](Stage 1.md)](https://github.com/Evans-01/F1_Project/blob/3250cdc2f4fa7109093cb79a2cf2400512839ddf/Stage%201.md)**  
+### **[[Stage 2: Data Analysis & Visualization](Stage 2.md)](https://github.com/Evans-01/F1_Project/blob/3250cdc2f4fa7109093cb79a2cf2400512839ddf/Stage%202.md)**  
 
 ---
