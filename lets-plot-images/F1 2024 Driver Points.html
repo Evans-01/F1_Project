@@ -1,0 +1,299 @@
+            <iframe src='about:blank' style='border:none !important;' width='1200' height='800' srcdoc="&lt;html lang=&quot;en&quot;>
+   &lt;head>
+       &lt;meta charset=&quot;UTF-8&quot;>
+       &lt;style> html, body { margin: 0; padding: 0; overflow: hidden; } &lt;/style>
+       &lt;script type=&quot;text/javascript&quot; data-lets-plot-script=&quot;library&quot; src=&quot;https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.6.0/js-package/distr/lets-plot.min.js&quot;>&lt;/script>
+   &lt;/head>
+   &lt;body>
+          &lt;div id=&quot;rqqJCT&quot;>&lt;/div>
+   &lt;script type=&quot;text/javascript&quot; data-lets-plot-script=&quot;plot&quot;>
+   
+   (function() {
+   // ----------
+   
+   const forceImmediateRender = false;
+   const responsive = false;
+   
+   let sizing = {
+       width_mode: &quot;FIXED&quot;,
+       height_mode: &quot;FIXED&quot;,
+       width: 1200.0, 
+       height: 800.0 
+   };
+   
+   const preferredWidth = document.body.dataset.letsPlotPreferredWidth;
+   if (preferredWidth !== undefined) {
+       sizing = {
+           width_mode: 'FIXED',
+           height_mode: 'SCALED',
+           width: parseFloat(preferredWidth)
+       };
+   }
+   
+   const containerDiv = document.getElementById(&quot;rqqJCT&quot;);
+   let fig = null;
+   
+   function renderPlot() {
+       if (fig === null) {
+           const plotSpec = {
+&quot;data&quot;:{
+&quot;Drivers&quot;:[&quot;M. VERSTAPPEN&quot;,&quot;L. NORRIS&quot;,&quot;C. LECLERC&quot;,&quot;O. PIASTRI&quot;,&quot;C. SAINZ&quot;,&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;,&quot;S. PEREZ&quot;,&quot;F. ALONSO&quot;,&quot;P. GASLY&quot;,&quot;N. HULKENBERG&quot;,&quot;Y. TSUNODA&quot;,&quot;L. STROLL&quot;,&quot;E. OCON&quot;,&quot;K. MAGNUSSEN&quot;,&quot;A. ALBON&quot;,&quot;D. RICCIARDO&quot;,&quot;O. BEARMAN&quot;,&quot;F. COLAPINTO&quot;,&quot;G. ZHOU&quot;,&quot;L. LAWSON&quot;,&quot;V. BOTTAS&quot;,&quot;L. SARGEANT&quot;,&quot;J. DOOHAN&quot;],
+&quot;Total_Points&quot;:[437.0,374.0,356.0,292.0,290.0,245.0,223.0,152.0,70.0,42.0,41.0,30.0,24.0,23.0,16.0,12.0,12.0,7.0,5.0,4.0,4.0,0.0,0.0,0.0],
+&quot;Races_Participated&quot;:[24.0,24.0,24.0,24.0,24.0,24.0,24.0,24.0,24.0,24.0,24.0,24.0,24.0,23.0,23.0,24.0,18.0,3.0,9.0,24.0,6.0,24.0,15.0,1.0]
+},
+&quot;mapping&quot;:{
+&quot;x&quot;:&quot;Total_Points&quot;,
+&quot;y&quot;:&quot;Drivers&quot;,
+&quot;fill&quot;:&quot;Races_Participated&quot;
+},
+&quot;data_meta&quot;:{
+&quot;series_annotations&quot;:[{
+&quot;type&quot;:&quot;str&quot;,
+&quot;column&quot;:&quot;Drivers&quot;
+},{
+&quot;type&quot;:&quot;str&quot;,
+&quot;column&quot;:&quot;Teams&quot;
+},{
+&quot;type&quot;:&quot;int&quot;,
+&quot;column&quot;:&quot;Year&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Australia&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Malaysia&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;China&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Turkey&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Bahrain&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Spain&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Monaco&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Canada&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;France&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Azerbaijan&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Austria&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Britain&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Germany&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Hungary&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Belgium&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Netherlands&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Italy&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Singapore&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Japan&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Russia&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Emilia_Romagna&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;South_Korea&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;India&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Abu_Dhabi&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Qatar&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Saudi_Arabia&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;USA&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Brazil&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Las_Vagas&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Miami&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Mexico&quot;
+},{
+&quot;type&quot;:&quot;int&quot;,
+&quot;column&quot;:&quot;Total_Points&quot;
+},{
+&quot;type&quot;:&quot;int&quot;,
+&quot;column&quot;:&quot;Races_Participated&quot;
+}]
+},
+&quot;ggtitle&quot;:{
+&quot;text&quot;:&quot;F1 2024 Season - Driver Points&quot;
+},
+&quot;guides&quot;:{
+&quot;x&quot;:{
+&quot;title&quot;:&quot;Total Points&quot;
+},
+&quot;y&quot;:{
+&quot;title&quot;:&quot;Drivers&quot;
+}
+},
+&quot;ggsize&quot;:{
+&quot;width&quot;:1200.0,
+&quot;height&quot;:800.0
+},
+&quot;theme&quot;:{
+&quot;axis_title_x&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;axis_title_y&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;axis_text_x&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;angle&quot;:90.0,
+&quot;vjust&quot;:0.5,
+&quot;blank&quot;:false
+},
+&quot;axis_text_y&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;legend_background&quot;:{
+&quot;fill&quot;:&quot;#000000&quot;,
+&quot;color&quot;:&quot;#000000&quot;,
+&quot;blank&quot;:false
+},
+&quot;legend_text&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;size&quot;:9.0,
+&quot;blank&quot;:false
+},
+&quot;legend_title&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;legend_position&quot;:&quot;right&quot;,
+&quot;panel_background&quot;:{
+&quot;fill&quot;:&quot;#000000&quot;,
+&quot;color&quot;:&quot;#000000&quot;,
+&quot;blank&quot;:false
+},
+&quot;panel_grid_major&quot;:{
+&quot;color&quot;:&quot;#444444&quot;,
+&quot;blank&quot;:false
+},
+&quot;panel_grid_minor&quot;:{
+&quot;blank&quot;:true
+},
+&quot;plot_background&quot;:{
+&quot;fill&quot;:&quot;#000000&quot;,
+&quot;color&quot;:&quot;#000000&quot;,
+&quot;blank&quot;:false
+},
+&quot;plot_title&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;face&quot;:&quot;bold&quot;,
+&quot;size&quot;:16.0,
+&quot;hjust&quot;:0.5,
+&quot;blank&quot;:false
+}
+},
+&quot;caption&quot;:{
+&quot;text&quot;:&quot;Data Source: 2024 F1 Season&quot;
+},
+&quot;kind&quot;:&quot;plot&quot;,
+&quot;scales&quot;:[],
+&quot;layers&quot;:[{
+&quot;geom&quot;:&quot;bar&quot;,
+&quot;stat&quot;:&quot;identity&quot;,
+&quot;mapping&quot;:{
+},
+&quot;data_meta&quot;:{
+},
+&quot;tooltip&quot;:{
+&quot;formats&quot;:[],
+&quot;lines&quot;:[&quot;Driver|@Drivers&quot;,&quot;Team|@Teams&quot;,&quot;Total Points|@Total_Points&quot;,&quot;Races Participated|@Races_Participated&quot;]
+},
+&quot;orientation&quot;:&quot;y&quot;,
+&quot;data&quot;:{
+}
+}],
+&quot;metainfo_list&quot;:[],
+&quot;spec_id&quot;:&quot;69&quot;
+};
+           fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing);
+       } else {
+           fig.updateView({});
+       }
+   }
+   
+   const renderImmediately = 
+       forceImmediateRender || (
+           sizing.width_mode === 'FIXED' &amp;&amp; 
+           (sizing.height_mode === 'FIXED' || sizing.height_mode === 'SCALED')
+       );
+   
+   if (renderImmediately) {
+       renderPlot();
+   }
+   
+   if (!renderImmediately || responsive) {
+       // Set up observer for initial sizing or continuous monitoring
+       var observer = new ResizeObserver(function(entries) {
+           for (let entry of entries) {
+               if (entry.contentBoxSize &amp;&amp; 
+                   entry.contentBoxSize[0].inlineSize > 0) {
+                   if (!responsive &amp;&amp; observer) {
+                       observer.disconnect();
+                       observer = null;
+                   }
+                   renderPlot();
+                   if (!responsive) {
+                       break;
+                   }
+               }
+           }
+       });
+       
+       observer.observe(containerDiv);
+   }
+   
+   // ----------
+   })();
+   
+   &lt;/script>
+   &lt;/body>
+&lt;/html>"></iframe>    
