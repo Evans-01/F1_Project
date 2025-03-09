@@ -1,0 +1,222 @@
+            <iframe src='about:blank' style='border:none !important;' width='1000' height='600' srcdoc="&lt;html lang=&quot;en&quot;>
+   &lt;head>
+       &lt;meta charset=&quot;UTF-8&quot;>
+       &lt;style> html, body { margin: 0; padding: 0; overflow: hidden; } &lt;/style>
+       &lt;script type=&quot;text/javascript&quot; data-lets-plot-script=&quot;library&quot; src=&quot;https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.6.0/js-package/distr/lets-plot.min.js&quot;>&lt;/script>
+   &lt;/head>
+   &lt;body>
+          &lt;div id=&quot;mPPGOE&quot;>&lt;/div>
+   &lt;script type=&quot;text/javascript&quot; data-lets-plot-script=&quot;plot&quot;>
+   
+   (function() {
+   // ----------
+   
+   const forceImmediateRender = false;
+   const responsive = false;
+   
+   let sizing = {
+       width_mode: &quot;FIXED&quot;,
+       height_mode: &quot;FIXED&quot;,
+       width: 1000.0, 
+       height: 600.0 
+   };
+   
+   const preferredWidth = document.body.dataset.letsPlotPreferredWidth;
+   if (preferredWidth !== undefined) {
+       sizing = {
+           width_mode: 'FIXED',
+           height_mode: 'SCALED',
+           width: parseFloat(preferredWidth)
+       };
+   }
+   
+   const containerDiv = document.getElementById(&quot;mPPGOE&quot;);
+   let fig = null;
+   
+   function renderPlot() {
+       if (fig === null) {
+           const plotSpec = {
+&quot;data&quot;:{
+&quot;Teams&quot;:[&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Alpine&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Aston Martin&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Ferrari&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;Hass&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;McLaren&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Racing Bulls&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Sauber&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;,&quot;Williams&quot;],
+&quot;Race&quot;:[&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;,&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;,&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;,&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;,&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;,&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;,&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;,&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;,&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;,&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;],
+&quot;Points&quot;:[0.0,0.0,0.0,0.0,0.0,1.0,1.0,2.0,5.0,8.0,9.0,9.0,9.0,11.0,13.0,13.0,13.0,13.0,13.0,14.0,49.0,49.0,59.0,65.0,3.0,13.0,25.0,33.0,40.0,42.0,44.0,44.0,58.0,58.0,58.0,68.0,69.0,73.0,74.0,74.0,82.0,86.0,86.0,86.0,86.0,86.0,92.0,94.0,27.0,43.0,87.0,114.0,145.0,181.0,206.0,246.0,246.0,264.0,285.0,296.0,316.0,339.0,364.0,401.0,419.0,435.0,490.0,531.0,551.0,578.0,613.0,646.0,0.0,7.0,10.0,10.0,11.0,13.0,13.0,13.0,13.0,13.0,25.0,33.0,33.0,33.0,33.0,34.0,35.0,37.0,44.0,52.0,52.0,56.0,60.0,64.0,12.0,28.0,55.0,69.0,96.0,124.0,154.0,184.0,212.0,237.0,268.0,295.0,338.0,366.0,404.0,438.0,476.0,516.0,544.0,566.0,593.0,608.0,640.0,666.0,16.0,26.0,26.0,34.0,52.0,64.0,79.0,96.0,124.0,151.0,196.0,221.0,241.0,266.0,276.0,292.0,309.0,329.0,344.0,366.0,382.0,425.0,446.0,468.0,0.0,0.0,6.0,7.0,7.0,19.0,20.0,24.0,28.0,28.0,30.0,31.0,33.0,34.0,34.0,34.0,34.0,34.0,36.0,36.0,44.0,46.0,46.0,46.0,44.0,87.0,97.0,141.0,195.0,239.0,268.0,276.0,301.0,330.0,355.0,373.0,389.0,408.0,434.0,446.0,456.0,475.0,504.0,512.0,544.0,555.0,581.0,589.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,2.0,2.0,2.0,4.0,4.0,4.0,4.0,6.0,16.0,16.0,17.0,17.0,17.0,17.0,17.0,17.0],
+&quot;Drivers&quot;:[[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;P. GASLY&quot;,&quot;E. OCON&quot;,&quot;J. DOOHAN&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;F. ALONSO&quot;,&quot;L. STROLL&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;C. LECLERC&quot;,&quot;C. SAINZ&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;N. HULKENBERG&quot;,&quot;K. MAGNUSSEN&quot;,&quot;O. BEARMAN&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;L. NORRIS&quot;,&quot;O. PIASTRI&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;G. RUSSELL&quot;,&quot;L. HAMILTON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;Y. TSUNODA&quot;,&quot;D. RICCIARDO&quot;,&quot;L. LAWSON&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;G. ZHOU&quot;,&quot;V. BOTTAS&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;],[&quot;A. ALBON&quot;,&quot;F. COLAPINTO&quot;,&quot;L. SARGEANT&quot;]]
+},
+&quot;mapping&quot;:{
+&quot;x&quot;:&quot;Race&quot;,
+&quot;y&quot;:&quot;Points&quot;,
+&quot;color&quot;:&quot;Teams&quot;,
+&quot;group&quot;:&quot;Teams&quot;
+},
+&quot;data_meta&quot;:{
+&quot;series_annotations&quot;:[{
+&quot;type&quot;:&quot;str&quot;,
+&quot;column&quot;:&quot;Teams&quot;
+},{
+&quot;type&quot;:&quot;str&quot;,
+&quot;factor_levels&quot;:[&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;],
+&quot;column&quot;:&quot;Race&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Points&quot;
+},{
+&quot;type&quot;:&quot;unknown(pandas:mixed)&quot;,
+&quot;column&quot;:&quot;Drivers&quot;
+}]
+},
+&quot;ggtitle&quot;:{
+&quot;text&quot;:&quot;F1 2024 Season - Team Points Progression&quot;
+},
+&quot;guides&quot;:{
+&quot;y&quot;:{
+&quot;title&quot;:&quot;Total Points&quot;
+}
+},
+&quot;ggsize&quot;:{
+&quot;width&quot;:1000.0,
+&quot;height&quot;:600.0
+},
+&quot;theme&quot;:{
+&quot;axis_title_x&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;axis_title_y&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;axis_text_x&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;angle&quot;:90.0,
+&quot;vjust&quot;:0.5,
+&quot;blank&quot;:false
+},
+&quot;axis_text_y&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;legend_background&quot;:{
+&quot;fill&quot;:&quot;#000000&quot;,
+&quot;color&quot;:&quot;#000000&quot;,
+&quot;blank&quot;:false
+},
+&quot;legend_text&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;size&quot;:9.0,
+&quot;blank&quot;:false
+},
+&quot;legend_title&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;legend_position&quot;:&quot;right&quot;,
+&quot;panel_background&quot;:{
+&quot;fill&quot;:&quot;#000000&quot;,
+&quot;color&quot;:&quot;#000000&quot;,
+&quot;blank&quot;:false
+},
+&quot;panel_grid_major&quot;:{
+&quot;color&quot;:&quot;#444444&quot;,
+&quot;blank&quot;:false
+},
+&quot;panel_grid_minor&quot;:{
+&quot;blank&quot;:true
+},
+&quot;plot_background&quot;:{
+&quot;fill&quot;:&quot;#000000&quot;,
+&quot;color&quot;:&quot;#000000&quot;,
+&quot;blank&quot;:false
+},
+&quot;plot_title&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;face&quot;:&quot;bold&quot;,
+&quot;size&quot;:16.0,
+&quot;hjust&quot;:0.5,
+&quot;blank&quot;:false
+}
+},
+&quot;caption&quot;:{
+&quot;text&quot;:&quot;Data Source: 2024 F1 Season&quot;
+},
+&quot;kind&quot;:&quot;plot&quot;,
+&quot;scales&quot;:[{
+&quot;aesthetic&quot;:&quot;color&quot;,
+&quot;values&quot;:[&quot;#429bfa&quot;,&quot;#0fa306&quot;,&quot;#ed1206&quot;,&quot;#7f7c70&quot;,&quot;#f27b16&quot;,&quot;#2ad5cb&quot;,&quot;#d2a640&quot;,&quot;#ebdb00&quot;,&quot;#0136fe&quot;,&quot;#492cf2&quot;,&quot;#492cf2&quot;]
+}],
+&quot;layers&quot;:[{
+&quot;geom&quot;:&quot;line&quot;,
+&quot;mapping&quot;:{
+},
+&quot;data_meta&quot;:{
+&quot;series_annotations&quot;:[{
+&quot;column&quot;:&quot;Race&quot;,
+&quot;factor_levels&quot;:[&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;]
+}]
+},
+&quot;size&quot;:1.5,
+&quot;data&quot;:{
+}
+},{
+&quot;geom&quot;:&quot;point&quot;,
+&quot;mapping&quot;:{
+},
+&quot;tooltips&quot;:{
+&quot;formats&quot;:[],
+&quot;lines&quot;:[&quot;Team|@Teams&quot;,&quot;Race|@Race&quot;,&quot;Total Points|@Points&quot;,&quot;Drivers|@Drivers&quot;]
+},
+&quot;data_meta&quot;:{
+&quot;series_annotations&quot;:[{
+&quot;column&quot;:&quot;Race&quot;,
+&quot;factor_levels&quot;:[&quot;Bahrain&quot;,&quot;Saudi_Arabia&quot;,&quot;Australia&quot;,&quot;Japan&quot;,&quot;China&quot;,&quot;Miami&quot;,&quot;Emilia_Romagna&quot;,&quot;Monaco&quot;,&quot;Canada&quot;,&quot;Spain&quot;,&quot;Austria&quot;,&quot;Britain&quot;,&quot;Hungary&quot;,&quot;Belgium&quot;,&quot;Netherlands&quot;,&quot;Italy&quot;,&quot;Azerbaijan&quot;,&quot;Singapore&quot;,&quot;USA&quot;,&quot;Mexico&quot;,&quot;Brazil&quot;,&quot;Las_Vagas&quot;,&quot;Qatar&quot;,&quot;Abu_Dhabi&quot;]
+}]
+},
+&quot;size&quot;:3.0,
+&quot;data&quot;:{
+}
+}],
+&quot;metainfo_list&quot;:[],
+&quot;spec_id&quot;:&quot;19&quot;
+};
+           fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing);
+       } else {
+           fig.updateView({});
+       }
+   }
+   
+   const renderImmediately = 
+       forceImmediateRender || (
+           sizing.width_mode === 'FIXED' &amp;&amp; 
+           (sizing.height_mode === 'FIXED' || sizing.height_mode === 'SCALED')
+       );
+   
+   if (renderImmediately) {
+       renderPlot();
+   }
+   
+   if (!renderImmediately || responsive) {
+       // Set up observer for initial sizing or continuous monitoring
+       var observer = new ResizeObserver(function(entries) {
+           for (let entry of entries) {
+               if (entry.contentBoxSize &amp;&amp; 
+                   entry.contentBoxSize[0].inlineSize > 0) {
+                   if (!responsive &amp;&amp; observer) {
+                       observer.disconnect();
+                       observer = null;
+                   }
+                   renderPlot();
+                   if (!responsive) {
+                       break;
+                   }
+               }
+           }
+       });
+       
+       observer.observe(containerDiv);
+   }
+   
+   // ----------
+   })();
+   
+   &lt;/script>
+   &lt;/body>
+&lt;/html>"></iframe>    

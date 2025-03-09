@@ -1,0 +1,214 @@
+            <iframe src='about:blank' style='border:none !important;' width='1000' height='600' srcdoc="&lt;html lang=&quot;en&quot;>
+   &lt;head>
+       &lt;meta charset=&quot;UTF-8&quot;>
+       &lt;style> html, body { margin: 0; padding: 0; overflow: hidden; } &lt;/style>
+       &lt;script type=&quot;text/javascript&quot; data-lets-plot-script=&quot;library&quot; src=&quot;https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.6.0/js-package/distr/lets-plot.min.js&quot;>&lt;/script>
+   &lt;/head>
+   &lt;body>
+          &lt;div id=&quot;yyCTHR&quot;>&lt;/div>
+   &lt;script type=&quot;text/javascript&quot; data-lets-plot-script=&quot;plot&quot;>
+   
+   (function() {
+   // ----------
+   
+   const forceImmediateRender = false;
+   const responsive = false;
+   
+   let sizing = {
+       width_mode: &quot;FIXED&quot;,
+       height_mode: &quot;FIXED&quot;,
+       width: 1000.0, 
+       height: 600.0 
+   };
+   
+   const preferredWidth = document.body.dataset.letsPlotPreferredWidth;
+   if (preferredWidth !== undefined) {
+       sizing = {
+           width_mode: 'FIXED',
+           height_mode: 'SCALED',
+           width: parseFloat(preferredWidth)
+       };
+   }
+   
+   const containerDiv = document.getElementById(&quot;yyCTHR&quot;);
+   let fig = null;
+   
+   function renderPlot() {
+       if (fig === null) {
+           const plotSpec = {
+&quot;data&quot;:{
+&quot;Drivers&quot;:[&quot;S. VETTEL&quot;,&quot;J. BUTTON&quot;,&quot;S. VETTEL&quot;,&quot;F. ALONSO&quot;,&quot;S. VETTEL&quot;,&quot;F. ALONSO&quot;,&quot;L. HAMILTON&quot;,&quot;N. ROSBERG&quot;,&quot;L. HAMILTON&quot;,&quot;N. ROSBERG&quot;,&quot;N. ROSBERG&quot;,&quot;L. HAMILTON&quot;,&quot;L. HAMILTON&quot;,&quot;S. VETTEL&quot;,&quot;L. HAMILTON&quot;,&quot;S. VETTEL&quot;,&quot;L. HAMILTON&quot;,&quot;V. BOTTAS&quot;,&quot;M. VERSTAPPEN&quot;,&quot;C. LECLERC&quot;,&quot;M. VERSTAPPEN&quot;,&quot;S. PEREZ&quot;,&quot;M. VERSTAPPEN&quot;,&quot;L. NORRIS&quot;],
+&quot;Teams&quot;:[&quot;Red Bull Racing&quot;,&quot;McLaren&quot;,&quot;Red Bull Racing&quot;,&quot;Ferrari&quot;,&quot;Red Bull Racing&quot;,&quot;Ferrari&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Ferrari&quot;,&quot;Mercedes&quot;,&quot;Ferrari&quot;,&quot;Mercedes&quot;,&quot;Mercedes&quot;,&quot;Red Bull Racing&quot;,&quot;Ferrari&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;Red Bull Racing&quot;,&quot;McLaren&quot;],
+&quot;Year&quot;:[&quot;2011&quot;,&quot;2011&quot;,&quot;2012&quot;,&quot;2012&quot;,&quot;2013&quot;,&quot;2013&quot;,&quot;2014&quot;,&quot;2014&quot;,&quot;2015&quot;,&quot;2015&quot;,&quot;2016&quot;,&quot;2016&quot;,&quot;2017&quot;,&quot;2017&quot;,&quot;2018&quot;,&quot;2018&quot;,&quot;2019&quot;,&quot;2019&quot;,&quot;2022&quot;,&quot;2022&quot;,&quot;2023&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2024&quot;],
+&quot;Total_Points&quot;:[392.0,270.0,281.0,278.0,397.0,242.0,384.0,317.0,381.0,322.0,385.0,380.0,363.0,317.0,408.0,320.0,413.0,326.0,454.0,308.0,575.0,285.0,437.0,374.0],
+&quot;Status&quot;:[&quot;Winner&quot;,&quot;Runner-up&quot;,&quot;Winner&quot;,&quot;Runner-up&quot;,&quot;Winner&quot;,&quot;Runner-up&quot;,&quot;Winner&quot;,&quot;Runner-up&quot;,&quot;Winner&quot;,&quot;Runner-up&quot;,&quot;Winner&quot;,&quot;Runner-up&quot;,&quot;Winner&quot;,&quot;Runner-up&quot;,&quot;Winner&quot;,&quot;Runner-up&quot;,&quot;Winner&quot;,&quot;Runner-up&quot;,&quot;Winner&quot;,&quot;Runner-up&quot;,&quot;Winner&quot;,&quot;Runner-up&quot;,&quot;Winner&quot;,&quot;Runner-up&quot;]
+},
+&quot;mapping&quot;:{
+},
+&quot;data_meta&quot;:{
+&quot;series_annotations&quot;:[{
+&quot;type&quot;:&quot;str&quot;,
+&quot;column&quot;:&quot;Drivers&quot;
+},{
+&quot;type&quot;:&quot;str&quot;,
+&quot;column&quot;:&quot;Teams&quot;
+},{
+&quot;type&quot;:&quot;str&quot;,
+&quot;column&quot;:&quot;Year&quot;
+},{
+&quot;type&quot;:&quot;int&quot;,
+&quot;column&quot;:&quot;Total_Points&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;Position&quot;
+},{
+&quot;type&quot;:&quot;str&quot;,
+&quot;column&quot;:&quot;Status&quot;
+}]
+},
+&quot;ggtitle&quot;:{
+&quot;text&quot;:&quot;Runner and Winner of Every Seasons&quot;
+},
+&quot;guides&quot;:{
+&quot;x&quot;:{
+&quot;title&quot;:&quot;Year&quot;
+},
+&quot;y&quot;:{
+&quot;title&quot;:&quot;Total Points&quot;
+}
+},
+&quot;ggsize&quot;:{
+&quot;width&quot;:1000.0,
+&quot;height&quot;:600.0
+},
+&quot;theme&quot;:{
+&quot;axis_title_x&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;axis_title_y&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;axis_text_x&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;angle&quot;:0.0,
+&quot;vjust&quot;:0.5,
+&quot;blank&quot;:false
+},
+&quot;axis_text_y&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;legend_background&quot;:{
+&quot;fill&quot;:&quot;#000000&quot;,
+&quot;color&quot;:&quot;#000000&quot;,
+&quot;blank&quot;:false
+},
+&quot;legend_text&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;size&quot;:9.0,
+&quot;blank&quot;:false
+},
+&quot;legend_title&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;blank&quot;:false
+},
+&quot;legend_position&quot;:&quot;right&quot;,
+&quot;panel_background&quot;:{
+&quot;fill&quot;:&quot;#000000&quot;,
+&quot;color&quot;:&quot;#000000&quot;,
+&quot;blank&quot;:false
+},
+&quot;panel_grid_major&quot;:{
+&quot;color&quot;:&quot;#444444&quot;,
+&quot;blank&quot;:false
+},
+&quot;panel_grid_minor&quot;:{
+&quot;blank&quot;:true
+},
+&quot;plot_background&quot;:{
+&quot;fill&quot;:&quot;#000000&quot;,
+&quot;color&quot;:&quot;#000000&quot;,
+&quot;blank&quot;:false
+},
+&quot;plot_title&quot;:{
+&quot;color&quot;:&quot;#FFFFFF&quot;,
+&quot;face&quot;:&quot;bold&quot;,
+&quot;size&quot;:16.0,
+&quot;hjust&quot;:0.5,
+&quot;blank&quot;:false
+}
+},
+&quot;caption&quot;:{
+&quot;text&quot;:&quot;Data Source: 2024 F1 Season&quot;
+},
+&quot;kind&quot;:&quot;plot&quot;,
+&quot;scales&quot;:[{
+&quot;name&quot;:&quot;Drivers&quot;,
+&quot;aesthetic&quot;:&quot;fill&quot;,
+&quot;values&quot;:[&quot;#4E79A7&quot;,&quot;#F28E2B&quot;,&quot;#E15759&quot;,&quot;#76B7B2&quot;,&quot;#59A14F&quot;,&quot;#EDC949&quot;,&quot;#AF7AA1&quot;,&quot;#FF9DA7&quot;,&quot;#9C755F&quot;,&quot;#BAB0AC&quot;]
+}],
+&quot;layers&quot;:[{
+&quot;geom&quot;:&quot;bar&quot;,
+&quot;stat&quot;:&quot;identity&quot;,
+&quot;mapping&quot;:{
+&quot;x&quot;:&quot;Year&quot;,
+&quot;y&quot;:&quot;Total_Points&quot;,
+&quot;fill&quot;:&quot;Drivers&quot;
+},
+&quot;tooltips&quot;:{
+&quot;formats&quot;:[],
+&quot;lines&quot;:[&quot;Driver: @Drivers&quot;,&quot;Team: @Teams&quot;,&quot;Status: @Status&quot;,&quot;Total Points: @Total_Points&quot;]
+},
+&quot;data_meta&quot;:{
+},
+&quot;data&quot;:{
+}
+}],
+&quot;metainfo_list&quot;:[],
+&quot;spec_id&quot;:&quot;22&quot;
+};
+           fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing);
+       } else {
+           fig.updateView({});
+       }
+   }
+   
+   const renderImmediately = 
+       forceImmediateRender || (
+           sizing.width_mode === 'FIXED' &amp;&amp; 
+           (sizing.height_mode === 'FIXED' || sizing.height_mode === 'SCALED')
+       );
+   
+   if (renderImmediately) {
+       renderPlot();
+   }
+   
+   if (!renderImmediately || responsive) {
+       // Set up observer for initial sizing or continuous monitoring
+       var observer = new ResizeObserver(function(entries) {
+           for (let entry of entries) {
+               if (entry.contentBoxSize &amp;&amp; 
+                   entry.contentBoxSize[0].inlineSize > 0) {
+                   if (!responsive &amp;&amp; observer) {
+                       observer.disconnect();
+                       observer = null;
+                   }
+                   renderPlot();
+                   if (!responsive) {
+                       break;
+                   }
+               }
+           }
+       });
+       
+       observer.observe(containerDiv);
+   }
+   
+   // ----------
+   })();
+   
+   &lt;/script>
+   &lt;/body>
+&lt;/html>"></iframe>    
