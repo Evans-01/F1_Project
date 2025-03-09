@@ -49,7 +49,7 @@ Here’s your updated version with placeholders for the HTML chart links:
 - 🥈 **Runner-Up**: *Ferrari*  
 
 ### **Championship Winners & Runners-Up (2011-2024)** *(Excluding 2020 & 2021)*  
-📌 **[View Chart](https://rawcdn.githack.com/Evans-01/F1_Project/ff73a67da6ff8889b1dc6f69a8393afda5abac49/lets-plot-images/Runner%20and%20Winner%20of%20Every%20Season.html)**   
+📌 **[View Chart](https://rawcdn.githack.com/Evans-01/F1_Project/6163fef069a88fd9fb59e440c8dbaa8d0091b443/lets-plot-images/Runner%20and%20Winner%20of%20Every%20Season.html)**   
 - 🏆 *Lewis Hamilton*: **5 titles** (*2014, 2015, 2017, 2018, 2019*).  
 - 🏆 *Sebastian Vettel*: **3 titles**.  
 - 🏆 *Max Verstappen*: **3 titles**.  
